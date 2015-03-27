@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "CameraNavControllerViewController.h"
+#import "ViewController.h"
+#import "EZYCollectionViewController.h"
+#import "EZYImageStoreFileSystem.h"
+#import "EZYDestinationDataSource.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +21,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+//    ViewController *vc = [[ViewController alloc] init];
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.itemSize = CGSizeMake(120, 120);
+    flowLayout.minimumInteritemSpacing = 5;
+    flowLayout.minimumLineSpacing = 5;
+    EZYCollectionViewController *collectionVC = [[EZYCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+    
+    CameraNavControllerViewController *camNav = [[CameraNavControllerViewController alloc] initWithRootViewController:collectionVC];
+    self.window.rootViewController = camNav;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -28,6 +47,10 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    BOOL success = [[EZYDestinationDataSource sharedDatasource] saveItems];
+    if (success) {
+        NSLog(@"Saved Destination Items");
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

@@ -14,6 +14,25 @@
 		50D647361AC0DDB4005EDA94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D647351AC0DDB4005EDA94 /* Images.xcassets */; };
 		50D647391AC0DDB4005EDA94 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D647371AC0DDB4005EDA94 /* LaunchScreen.xib */; };
 		50D647451AC0DDB4005EDA94 /* CameraTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D647441AC0DDB4005EDA94 /* CameraTestTests.m */; };
+		50D647501AC0DE69005EDA94 /* CameraNavControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6474F1AC0DE69005EDA94 /* CameraNavControllerViewController.m */; };
+		50D647581AC23A80005EDA94 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D647571AC23A80005EDA94 /* CoreLocation.framework */; };
+		50D6475E1AC23BD7005EDA94 /* EZYCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6475D1AC23BD7005EDA94 /* EZYCollectionViewController.m */; };
+		50D647601AC24248005EDA94 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D6475F1AC24248005EDA94 /* ImageCollectionViewCell.xib */; };
+		50D647631AC24403005EDA94 /* EZYCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D647621AC24403005EDA94 /* EZYCollectionViewCell.m */; };
+		50D647661AC25C82005EDA94 /* EZYImageStoreFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D647651AC25C82005EDA94 /* EZYImageStoreFileSystem.m */; };
+		50D6476D1AC377EF005EDA94 /* EZYDestinationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6476C1AC377EF005EDA94 /* EZYDestinationDataSource.m */; };
+		50D647701AC37889005EDA94 /* EZYDestination.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6476F1AC37889005EDA94 /* EZYDestination.m */; };
+		50D647711AC3789F005EDA94 /* EZYDestination.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6476F1AC37889005EDA94 /* EZYDestination.m */; };
+		50D647721AC378A7005EDA94 /* EZYDestinationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6476C1AC377EF005EDA94 /* EZYDestinationDataSource.m */; };
+		50D647731AC378AF005EDA94 /* CameraNavControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6474F1AC0DE69005EDA94 /* CameraNavControllerViewController.m */; };
+		50D647741AC378AF005EDA94 /* EZYCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6475D1AC23BD7005EDA94 /* EZYCollectionViewController.m */; };
+		50D647751AC378B0005EDA94 /* EZYCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D647621AC24403005EDA94 /* EZYCollectionViewCell.m */; };
+		50D647761AC378B0005EDA94 /* EZYImageStoreFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D647651AC25C82005EDA94 /* EZYImageStoreFileSystem.m */; };
+		50D647781AC378D8005EDA94 /* DestinationTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D647771AC378D8005EDA94 /* DestinationTestCase.m */; };
+		50D6477A1AC37BB9005EDA94 /* EZYDestinationDataSourceTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D647791AC37BB9005EDA94 /* EZYDestinationDataSourceTestCase.m */; };
+		50D6477D1AC38ABC005EDA94 /* EZYDestinationImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6477C1AC38ABC005EDA94 /* EZYDestinationImageStore.m */; };
+		50D6477E1AC38DD2005EDA94 /* EZYDestinationImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6477C1AC38ABC005EDA94 /* EZYDestinationImageStore.m */; };
+		50D647801AC38DE5005EDA94 /* EZYDestinationImageStoreTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6477F1AC38DE5005EDA94 /* EZYDestinationImageStoreTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +59,25 @@
 		50D6473E1AC0DDB4005EDA94 /* CameraTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D647431AC0DDB4005EDA94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D647441AC0DDB4005EDA94 /* CameraTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraTestTests.m; sourceTree = "<group>"; };
+		50D6474E1AC0DE69005EDA94 /* CameraNavControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraNavControllerViewController.h; sourceTree = "<group>"; };
+		50D6474F1AC0DE69005EDA94 /* CameraNavControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraNavControllerViewController.m; sourceTree = "<group>"; };
+		50D647571AC23A80005EDA94 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		50D6475C1AC23BD7005EDA94 /* EZYCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYCollectionViewController.h; sourceTree = "<group>"; };
+		50D6475D1AC23BD7005EDA94 /* EZYCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYCollectionViewController.m; sourceTree = "<group>"; };
+		50D6475F1AC24248005EDA94 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		50D647611AC24403005EDA94 /* EZYCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYCollectionViewCell.h; sourceTree = "<group>"; };
+		50D647621AC24403005EDA94 /* EZYCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYCollectionViewCell.m; sourceTree = "<group>"; };
+		50D647641AC25C82005EDA94 /* EZYImageStoreFileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYImageStoreFileSystem.h; sourceTree = "<group>"; };
+		50D647651AC25C82005EDA94 /* EZYImageStoreFileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYImageStoreFileSystem.m; sourceTree = "<group>"; };
+		50D6476B1AC377EF005EDA94 /* EZYDestinationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYDestinationDataSource.h; sourceTree = "<group>"; };
+		50D6476C1AC377EF005EDA94 /* EZYDestinationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYDestinationDataSource.m; sourceTree = "<group>"; };
+		50D6476E1AC37889005EDA94 /* EZYDestination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYDestination.h; sourceTree = "<group>"; };
+		50D6476F1AC37889005EDA94 /* EZYDestination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYDestination.m; sourceTree = "<group>"; };
+		50D647771AC378D8005EDA94 /* DestinationTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationTestCase.m; sourceTree = "<group>"; };
+		50D647791AC37BB9005EDA94 /* EZYDestinationDataSourceTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYDestinationDataSourceTestCase.m; sourceTree = "<group>"; };
+		50D6477B1AC38ABC005EDA94 /* EZYDestinationImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYDestinationImageStore.h; sourceTree = "<group>"; };
+		50D6477C1AC38ABC005EDA94 /* EZYDestinationImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYDestinationImageStore.m; sourceTree = "<group>"; };
+		50D6477F1AC38DE5005EDA94 /* EZYDestinationImageStoreTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYDestinationImageStoreTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D647581AC23A80005EDA94 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +102,7 @@
 		50D6471C1AC0DDB4005EDA94 = {
 			isa = PBXGroup;
 			children = (
+				50D647571AC23A80005EDA94 /* CoreLocation.framework */,
 				50D647271AC0DDB4005EDA94 /* CameraTest */,
 				50D647411AC0DDB4005EDA94 /* CameraTestTests */,
 				50D647261AC0DDB4005EDA94 /* Products */,
@@ -89,6 +129,21 @@
 				50D647351AC0DDB4005EDA94 /* Images.xcassets */,
 				50D647371AC0DDB4005EDA94 /* LaunchScreen.xib */,
 				50D647281AC0DDB4005EDA94 /* Supporting Files */,
+				50D6474E1AC0DE69005EDA94 /* CameraNavControllerViewController.h */,
+				50D6474F1AC0DE69005EDA94 /* CameraNavControllerViewController.m */,
+				50D6475C1AC23BD7005EDA94 /* EZYCollectionViewController.h */,
+				50D6475D1AC23BD7005EDA94 /* EZYCollectionViewController.m */,
+				50D6475F1AC24248005EDA94 /* ImageCollectionViewCell.xib */,
+				50D647611AC24403005EDA94 /* EZYCollectionViewCell.h */,
+				50D647621AC24403005EDA94 /* EZYCollectionViewCell.m */,
+				50D647641AC25C82005EDA94 /* EZYImageStoreFileSystem.h */,
+				50D647651AC25C82005EDA94 /* EZYImageStoreFileSystem.m */,
+				50D6476B1AC377EF005EDA94 /* EZYDestinationDataSource.h */,
+				50D6476C1AC377EF005EDA94 /* EZYDestinationDataSource.m */,
+				50D6476E1AC37889005EDA94 /* EZYDestination.h */,
+				50D6476F1AC37889005EDA94 /* EZYDestination.m */,
+				50D6477B1AC38ABC005EDA94 /* EZYDestinationImageStore.h */,
+				50D6477C1AC38ABC005EDA94 /* EZYDestinationImageStore.m */,
 			);
 			path = CameraTest;
 			sourceTree = "<group>";
@@ -107,6 +162,9 @@
 			children = (
 				50D647441AC0DDB4005EDA94 /* CameraTestTests.m */,
 				50D647421AC0DDB4005EDA94 /* Supporting Files */,
+				50D647771AC378D8005EDA94 /* DestinationTestCase.m */,
+				50D647791AC37BB9005EDA94 /* EZYDestinationDataSourceTestCase.m */,
+				50D6477F1AC38DE5005EDA94 /* EZYDestinationImageStoreTestCase.m */,
 			);
 			path = CameraTestTests;
 			sourceTree = "<group>";
@@ -201,6 +259,7 @@
 			files = (
 				50D647341AC0DDB4005EDA94 /* Main.storyboard in Resources */,
 				50D647391AC0DDB4005EDA94 /* LaunchScreen.xib in Resources */,
+				50D647601AC24248005EDA94 /* ImageCollectionViewCell.xib in Resources */,
 				50D647361AC0DDB4005EDA94 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,8 +279,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D647311AC0DDB4005EDA94 /* ViewController.m in Sources */,
+				50D647661AC25C82005EDA94 /* EZYImageStoreFileSystem.m in Sources */,
+				50D6476D1AC377EF005EDA94 /* EZYDestinationDataSource.m in Sources */,
+				50D647701AC37889005EDA94 /* EZYDestination.m in Sources */,
 				50D6472E1AC0DDB4005EDA94 /* AppDelegate.m in Sources */,
 				50D6472B1AC0DDB4005EDA94 /* main.m in Sources */,
+				50D647631AC24403005EDA94 /* EZYCollectionViewCell.m in Sources */,
+				50D6477D1AC38ABC005EDA94 /* EZYDestinationImageStore.m in Sources */,
+				50D647501AC0DE69005EDA94 /* CameraNavControllerViewController.m in Sources */,
+				50D6475E1AC23BD7005EDA94 /* EZYCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +296,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D647451AC0DDB4005EDA94 /* CameraTestTests.m in Sources */,
+				50D647761AC378B0005EDA94 /* EZYImageStoreFileSystem.m in Sources */,
+				50D647721AC378A7005EDA94 /* EZYDestinationDataSource.m in Sources */,
+				50D647711AC3789F005EDA94 /* EZYDestination.m in Sources */,
+				50D647751AC378B0005EDA94 /* EZYCollectionViewCell.m in Sources */,
+				50D647731AC378AF005EDA94 /* CameraNavControllerViewController.m in Sources */,
+				50D647801AC38DE5005EDA94 /* EZYDestinationImageStoreTestCase.m in Sources */,
+				50D647781AC378D8005EDA94 /* DestinationTestCase.m in Sources */,
+				50D6477E1AC38DD2005EDA94 /* EZYDestinationImageStore.m in Sources */,
+				50D6477A1AC37BB9005EDA94 /* EZYDestinationDataSourceTestCase.m in Sources */,
+				50D647741AC378AF005EDA94 /* EZYCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +488,7 @@
 				50D6474A1AC0DDB4005EDA94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50D6474B1AC0DDB4005EDA94 /* Build configuration list for PBXNativeTarget "CameraTestTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +497,7 @@
 				50D6474D1AC0DDB4005EDA94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
