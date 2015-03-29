@@ -12,6 +12,9 @@
 #import "EZYCollectionViewController.h"
 #import "EZYImageStoreFileSystem.h"
 #import "EZYDestinationDataSource.h"
+#import <GoogleMaps/GoogleMaps.h>
+
+static NSString *const googleMapsAPIKey = @"AIzaSyDFrgUJZfDFjsPRNTuKavskH8Atkj-s4xI";
 
 @interface AppDelegate ()
 
@@ -23,6 +26,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [GMSServices provideAPIKey:googleMapsAPIKey];
     
 //    ViewController *vc = [[ViewController alloc] init];
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];

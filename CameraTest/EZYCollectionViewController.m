@@ -12,6 +12,7 @@
 #import "EZYDestination.h"
 #import "EZYDestinationDataSource.h"
 #import "EZYDestinationImageStore.h"
+#import "EZYDestinationMapViewController.h"
 
 @interface EZYCollectionViewController ()
 
@@ -78,16 +79,8 @@
     EZYDestination *destinationSelected = [[EZYDestinationDataSource sharedDatasource].destinations objectAtIndex:indexPath.row];
     NSLog(@"Selected destination: %@", destinationSelected);
     
-#pragma warn REMOVE CODE
-    CLLocationCoordinate2D selectDestLocationCords = destinationSelected.location.coordinate;
-    NSString *alertMessage = [NSString stringWithFormat:@"Lat: %f Long: %f \nHeading: %f", selectDestLocationCords.latitude, selectDestLocationCords.longitude, destinationSelected.heading.trueHeading];
-    
-    UIAlertController *destinationSelectionAlert = [UIAlertController alertControllerWithTitle:@"Destination" message:alertMessage preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *dismissAction = [UIAlertAction actionWithTitle:@"Neat" style:UIAlertActionStyleDefault handler:nil];
-    [destinationSelectionAlert addAction:dismissAction];
-    
-    [self presentViewController:destinationSelectionAlert animated:YES completion:nil];
-    
+    EZYDestinationMapViewController *mapViewController = [[EZYDestinationMapViewController alloc] initWithDestination:destinationSelected];
+    [self.navigationController pushViewController:mapViewController animated:YES];
 }
 
 - (void)cameraBarButtonPressed
@@ -116,7 +109,7 @@
     }
 }
 
-#pragma mark UIImagePickerControllerDelegate
+#pragma mark UIImagePickerControllerDelegate -
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -128,7 +121,6 @@
     
     // Here we need to pass the UIImage to the Datastore which should store the image and create a thumbnail
     if (editedImage) {
-//        CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:41.8369 longitude:87.6847]; // Chicago :D
         CLLocation *currentLocation = self.coreLocationManager.location; // This could be old, we should check the timestamp before using it.
         CLHeading *currentHeading = self.coreLocationManager.heading;
         NSString *imageKeyUUID = [NSUUID UUID].UUIDString;
@@ -141,7 +133,7 @@
     [self.collectionView reloadData];
 }
 
-#pragma mark CLLocationManagerDelegate - Locations
+#pragma mark CLLocationManagerDelegate - Locations -
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
@@ -166,7 +158,7 @@
     NSLog(@"Updating Locations: Most Recent Location is %@", locations[locations.count - 1]);
 }
 
-#pragma mark CLLoactionManagerDelegate - Heading
+#pragma mark CLLoactionManagerDelegate - Heading -
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
 {
