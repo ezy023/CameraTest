@@ -30,9 +30,9 @@ static NSString *const googleMapsAPIKey = @"AIzaSyDFrgUJZfDFjsPRNTuKavskH8Atkj-s
     
 //    ViewController *vc = [[ViewController alloc] init];
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(120, 120);
-    flowLayout.minimumInteritemSpacing = 5;
-    flowLayout.minimumLineSpacing = 5;
+    flowLayout.itemSize = CGSizeMake(123, 123);
+    flowLayout.minimumInteritemSpacing = 2;
+    flowLayout.minimumLineSpacing = 2;
     EZYCollectionViewController *collectionVC = [[EZYCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
     
     CameraNavControllerViewController *camNav = [[CameraNavControllerViewController alloc] initWithRootViewController:collectionVC];

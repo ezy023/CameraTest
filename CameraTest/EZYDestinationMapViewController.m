@@ -9,6 +9,8 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <CoreLocation/CoreLocation.h>
 #import "EZYDestinationMapViewController.h"
+#import "EZYDestinationImageStore.h"
+#import "EZYImageIsolationViewController.h"
 
 @interface EZYDestinationMapViewController ()
 
@@ -32,6 +34,42 @@
 
 - (void)viewDidLoad
 {
+    [self setUpMapView];
+    [self addButton];
+    
+}
+
+- (void)addButton
+{
+    CGRect viewRect = CGRectMake([UIScreen mainScreen].bounds.size.width - 140, [UIScreen mainScreen].bounds.size.height - 140, 120, 120);
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = viewRect;
+    button.backgroundColor = [UIColor blueColor];
+    UIImage *btnImage = [[EZYDestinationImageStore sharedDestinationImageStore] imageForKey:self.destination.imageKey];
+    [button setImage:btnImage forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(imageTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.mapView addSubview:button];
+}
+
+//- (UIImage *)getScaledDownImage
+//{
+//    UIImage *storedDestinationImage = [[EZYDestinationImageStore sharedDestinationImageStore] imageForKey:self.destination.imageKey];
+//    CGSize newImageSize = CGSizeMake(120, 120);
+//    CGRect viewRect = CGRectMake([UIScreen mainScreen].bounds.size.width - 140, [UIScreen mainScreen].bounds.size.height - 140, 120, 120);
+//    
+//    UIGraphicsBeginImageContextWithOptions(newImageSize, NO, [UIScreen mainScreen].scale);
+//    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+//    CGContextDrawImage(currentContext, viewRect, storedDestinationImage.CGImage);
+//    
+//    UIImage *processedImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    
+//    return processedImage;
+//}
+
+- (void)setUpMapView
+{
     CLLocationCoordinate2D destinationLocation = self.destination.location.coordinate;
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:destinationLocation.latitude longitude:destinationLocation.longitude zoom:15];
     
@@ -44,6 +82,17 @@
     destinationMarker.map = self.mapView;
     
     self.view = self.mapView;
+}
+
+- (void)imageTapped:(UITapGestureRecognizer *)sender
+{
+    NSLog(@"Image was tapped");
+
+    UIImage *isoImage = [[EZYDestinationImageStore sharedDestinationImageStore] imageForKey:self.destination.imageKey];
+    EZYImageIsolationViewController *imageIsoVC = [[EZYImageIsolationViewController alloc] initWithImage:isoImage];
+//    [imageIsoVC.imageView setImage:isoImage];
+//    imageIsoVC.imageView.backgroundColor = [UIColor orangeColor];
+    [self presentViewController:imageIsoVC animated:YES completion:nil];
 }
 
 @end

@@ -32,7 +32,7 @@
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.collectionView.backgroundColor = [UIColor blueColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     
     [self.collectionView registerClass:[EZYCollectionViewCell class] forCellWithReuseIdentifier:@"CollectionCell"];
     
@@ -74,6 +74,8 @@
     return cell;
 }
 
+#pragma marks UICollectionViewDelegate
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     EZYDestination *destinationSelected = [[EZYDestinationDataSource sharedDatasource].destinations objectAtIndex:indexPath.row];
@@ -82,6 +84,23 @@
     EZYDestinationMapViewController *mapViewController = [[EZYDestinationMapViewController alloc] initWithDestination:destinationSelected];
     [self.navigationController pushViewController:mapViewController animated:YES];
 }
+
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+    
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
+{
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
+{
+    NSLog(@"EDITING COLLECTION VIEW CELL");
+}
+
 
 - (void)cameraBarButtonPressed
 {

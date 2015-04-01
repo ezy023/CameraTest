@@ -21,6 +21,7 @@
 		50105A481AC87DE9008A74F2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A471AC87DE9008A74F2 /* QuartzCore.framework */; };
 		50105A4A1AC87DF2008A74F2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A491AC87DF2008A74F2 /* SystemConfiguration.framework */; };
 		50105A511AC8906C008A74F2 /* EZYDestinationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50105A501AC8906C008A74F2 /* EZYDestinationMapViewController.m */; };
+		5014C30C1ACA2CFA0028892D /* EZYImageIsolationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014C30B1ACA2CFA0028892D /* EZYImageIsolationViewController.m */; };
 		50D6472B1AC0DDB4005EDA94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6472A1AC0DDB4005EDA94 /* main.m */; };
 		50D6472E1AC0DDB4005EDA94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6472D1AC0DDB4005EDA94 /* AppDelegate.m */; };
 		50D647311AC0DDB4005EDA94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D647301AC0DDB4005EDA94 /* ViewController.m */; };
@@ -75,6 +76,8 @@
 		50105A491AC87DF2008A74F2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		50105A4F1AC8906C008A74F2 /* EZYDestinationMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYDestinationMapViewController.h; sourceTree = "<group>"; };
 		50105A501AC8906C008A74F2 /* EZYDestinationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYDestinationMapViewController.m; sourceTree = "<group>"; };
+		5014C30A1ACA2CFA0028892D /* EZYImageIsolationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYImageIsolationViewController.h; sourceTree = "<group>"; };
+		5014C30B1ACA2CFA0028892D /* EZYImageIsolationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYImageIsolationViewController.m; sourceTree = "<group>"; };
 		50D647251AC0DDB4005EDA94 /* CameraTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D647291AC0DDB4005EDA94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D6472A1AC0DDB4005EDA94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				50D6477C1AC38ABC005EDA94 /* EZYDestinationImageStore.m */,
 				50105A4F1AC8906C008A74F2 /* EZYDestinationMapViewController.h */,
 				50105A501AC8906C008A74F2 /* EZYDestinationMapViewController.m */,
+				5014C30A1ACA2CFA0028892D /* EZYImageIsolationViewController.h */,
+				5014C30B1ACA2CFA0028892D /* EZYImageIsolationViewController.m */,
 			);
 			path = CameraTest;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				50D647661AC25C82005EDA94 /* EZYImageStoreFileSystem.m in Sources */,
 				50D6476D1AC377EF005EDA94 /* EZYDestinationDataSource.m in Sources */,
 				50D647701AC37889005EDA94 /* EZYDestination.m in Sources */,
+				5014C30C1ACA2CFA0028892D /* EZYImageIsolationViewController.m in Sources */,
 				50D6472E1AC0DDB4005EDA94 /* AppDelegate.m in Sources */,
 				50D6472B1AC0DDB4005EDA94 /* main.m in Sources */,
 				50D647631AC24403005EDA94 /* EZYCollectionViewCell.m in Sources */,

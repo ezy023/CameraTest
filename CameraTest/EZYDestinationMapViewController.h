@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "EZYDestination.h"
 
-@interface EZYDestinationMapViewController : UIViewController
+@interface EZYDestinationMapViewController : UIViewController <UIGestureRecognizerDelegate>
 
 - (instancetype)initWithDestination:(EZYDestination *)destination;
 
