@@ -53,6 +53,14 @@ static NSString *const archiveDirectoryPath = @"destinations.archive";
     NSLog(@"Added Destination");
 }
 
+- (void)removeDestinationFromDataSource:(EZYDestination *)destination
+{
+    NSMutableArray *mutableDestinationsArray = [self.destinations mutableCopy];
+    [mutableDestinationsArray removeObject:destination];
+    self.destinations = [NSArray arrayWithArray:mutableDestinationsArray];
+    NSLog(@"Destination %@ Removed", destination);
+}
+
 - (NSString *)archivePath
 {
     NSArray *directoriesArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

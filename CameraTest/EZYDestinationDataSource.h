@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EZYDestination.h"
 
 @interface EZYDestinationDataSource : NSObject
 
@@ -14,7 +15,8 @@
 
 + (instancetype)sharedDatasource;
 
-- (void)addDestinationToDataSource:()destination;
+- (void)addDestinationToDataSource:(EZYDestination *)destination;
+- (void)removeDestinationFromDataSource:(EZYDestination *)destination;
 - (BOOL)saveItems;
 
 @end

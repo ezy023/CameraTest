@@ -15,11 +15,7 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-//        NSURL *url = [NSURL URLWithString:@"http://tms.visioncritical.com/sites/default/files/tweet-this_0.png"];
-//        NSData *imageData = [NSData dataWithContentsOfURL:url];
-//        UIImage *image = [UIImage imageWithData:imageData];
         _imageView = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
-//        _imageView = [[UIImageView alloc] initWithImage:image];
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
         [self.contentView addSubview:_imageView];
     }
@@ -27,4 +23,26 @@
     return self;
 }
 
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    if (action == @selector(delete:)) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (void)delete:(id)sender
+{
+    UICollectionView *collectionView = (UICollectionView *) self.superview;
+    if ([collectionView isKindOfClass:[UICollectionView class]]) {
+        id <UICollectionViewDelegate> collectionViewDelegate = collectionView.delegate;
+        if ([collectionViewDelegate respondsToSelector:@selector(collectionView:performAction:forItemAtIndexPath:withSender:)]) {
+            [collectionViewDelegate collectionView:collectionView performAction:@selector(removeCellAtIndexPath:) forItemAtIndexPath:[collectionView indexPathForCell:self] withSender:sender];
+        }
+    }
+}
+
+
 @end
+

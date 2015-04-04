@@ -106,12 +106,26 @@
 
 - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
 {
+    if (action == @selector(delete:)) {
+        return YES;
+    }
+    
     return NO;
+}
+
+- (void)removeCellAtIndexPath:(NSIndexPath *)indexPath
+{
+    EZYDestination *destinationToDelete = [[EZYDestinationDataSource sharedDatasource].destinations objectAtIndex:indexPath.row];
+    [[EZYDestinationDataSource sharedDatasource] removeDestinationFromDataSource:destinationToDelete];
+    [[EZYDestinationImageStore sharedDestinationImageStore] removeImageForKey:destinationToDelete.imageKey];
+    [self.collectionView reloadData];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
 {
-    NSLog(@"EDITING COLLECTION VIEW CELL");
+    if (action == @selector(removeCellAtIndexPath:)) {
+        [self removeCellAtIndexPath:indexPath];
+    }
 }
 
 

@@ -47,8 +47,6 @@
     NSData *imageData = [NSData dataWithContentsOfFile:readPath];
     UIImage *image = [UIImage imageWithData:imageData];
 
-    NSLog(@"Retrieving filename: %@", filename);
-    
     return image;
 }
 
