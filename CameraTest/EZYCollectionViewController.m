@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Collection";
+    self.title = @"Neat Places";
     [self addCameraButtonToNavView];
     
     self.collectionView.delegate = self;
