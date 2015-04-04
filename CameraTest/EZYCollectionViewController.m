@@ -40,6 +40,8 @@
     self.coreLocationManager.delegate = self;
     self.coreLocationManager.distanceFilter = kCLDistanceFilterNone;
     self.coreLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    [self addLongPressGestureRecognizerToCollectionView:self.collectionView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -70,8 +72,19 @@
     EZYCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionCell" forIndexPath:indexPath];
     EZYDestination *destinationAtIndex = [[EZYDestinationDataSource sharedDatasource].destinations objectAtIndex:indexPath.row];
     cell.imageView.image = [[EZYDestinationImageStore sharedDestinationImageStore] imageForKey:destinationAtIndex.imageKey];
-    cell.contentView.backgroundColor = [UIColor greenColor];
+    
     return cell;
+}
+
+- (void)addLongPressGestureRecognizerToCollectionView:(UICollectionView *)collectionView
+{
+    UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(deleteImageFromCollection)];
+    longPressGestureRecognizer.delaysTouchesBegan = YES;
+}
+
+- (void)deleteImageFromCollection
+{
+    NSLog(@"Delete this image");
 }
 
 #pragma marks UICollectionViewDelegate
@@ -93,7 +106,7 @@
 
 - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
 {
-    return YES;
+    return NO;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
@@ -174,7 +187,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
 {
     // This method is called when -startUpdatingLocation is called and the location manager starts to update locations
-    NSLog(@"Updating Locations: Most Recent Location is %@", locations[locations.count - 1]);
+//    NSLog(@"Updating Locations: Most Recent Location is %@", locations[locations.count - 1]);
 }
 
 #pragma mark CLLoactionManagerDelegate - Heading -
