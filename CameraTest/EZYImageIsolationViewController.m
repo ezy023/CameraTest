@@ -69,11 +69,9 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
-- (void)addConstraints
+- (UIStatusBarStyle)preferredStatusBarStyle
 {
-    NSDictionary *variables = @{@"imageView": self.imageView,
-                                @"dismissButton": self.dismissButton};
-    
+    return UIStatusBarStyleDefault;
 }
 
 - (void)buttonPressed

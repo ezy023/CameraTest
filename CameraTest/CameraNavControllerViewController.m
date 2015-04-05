@@ -27,8 +27,8 @@
     
 
     [navBar setTintColor:[UIColor whiteColor]];
-    
     [navBar setTitleTextAttributes:navigationBarTitleTextAttributes];
+    navBar.barStyle = UIBarStyleBlackTranslucent;
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     // Do any additional setup after loading the view.
