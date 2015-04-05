@@ -19,18 +19,16 @@
 
     UINavigationBar *navBar = [UINavigationBar appearance];
     
-    UIColor *navBarDarkBlue = [UIColor colorWithRed:0/255.0 green:39/255.0 blue:157/255.0 alpha:1.0];
+    UIColor *navBarDarkBlue = [UIColor colorWithRed:6/255.0 green:52/255.0 blue:93/255.0 alpha:1.0];
     [navBar setBarTintColor:navBarDarkBlue];
-    UIFont *newFont = [UIFont fontWithName:@"Futura-MediumItalic" size:24.0];
+    UIFont *newFont = [UIFont fontWithName:@"Futura-Medium" size:24.0];
     NSDictionary *navigationBarTitleTextAttributes = @{NSFontAttributeName: newFont,
                                                        NSForegroundColorAttributeName: [UIColor whiteColor]};
     
 
     [navBar setTintColor:[UIColor whiteColor]];
+    [navBar setTranslucent:NO];
     [navBar setTitleTextAttributes:navigationBarTitleTextAttributes];
-    navBar.barStyle = UIBarStyleBlackTranslucent;
-    
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     // Do any additional setup after loading the view.
 }
 
@@ -39,6 +37,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 - (void)cameraPressed
 {

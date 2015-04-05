@@ -7,6 +7,7 @@
 //
 
 #import "EZYImageIsolationViewController.h"
+#import "NSString+FontAwesome.h"
 
 @implementation EZYImageIsolationViewController
 
@@ -16,7 +17,7 @@
     
     if (self) {
         self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        self.view.backgroundColor = [UIColor whiteColor];
+        self.view.backgroundColor = [UIColor colorWithRed:6/255.0 green:52/255.0 blue:93/255.0 alpha:1.0];
         
         CGRect imageViewRect = CGRectMake(0, 75, [UIScreen mainScreen].bounds.size.width, 400);
         _imageView = [[UIImageView alloc] initWithFrame:imageViewRect];
@@ -24,11 +25,13 @@
         self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.view addSubview:self.imageView];
     
-        _dismissButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        self.dismissButton.backgroundColor = [UIColor orangeColor];
-        self.dismissButton.frame = CGRectMake(0, 0, 100, 50);
-        self.dismissButton.translatesAutoresizingMaskIntoConstraints = NO;
-        self.dismissButton.titleLabel.text = @"HELLO";
+        _dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _dismissButton.frame = CGRectMake(0, 0, 100, 50);
+        _dismissButton.translatesAutoresizingMaskIntoConstraints = NO;
+        [_dismissButton.titleLabel setFont:[UIFont fontWithName:@"FontAwesome" size:36.0]];
+        [_dismissButton setTitle:[NSString fontAwesomeIconStringForIconIdentifier:@"fa-times-circle-o"] forState:UIControlStateNormal];
+        [_dismissButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_dismissButton sizeToFit];
         [self.dismissButton addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:self.dismissButton];
 
@@ -69,9 +72,10 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
+# pragma mark UIStatusBarStyle Preference
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    return UIStatusBarStyleDefault;
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)buttonPressed

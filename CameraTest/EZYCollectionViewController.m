@@ -13,6 +13,7 @@
 #import "EZYDestinationDataSource.h"
 #import "EZYDestinationImageStore.h"
 #import "EZYDestinationMapViewController.h"
+#import "NSString+FontAwesome.h"
 
 @interface EZYCollectionViewController ()
 
@@ -52,9 +53,14 @@
 
 - (void)addCameraButtonToNavView
 {
-    UIBarButtonItem *cameraButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(cameraBarButtonPressed)];
-    self.navigationItem.rightBarButtonItem = cameraButton;
-
+    UIBarButtonItem *camera = [[UIBarButtonItem alloc] init];
+    NSDictionary *titleTextAttr = @{NSFontAttributeName: [UIFont fontWithName:@"FontAwesome" size:28.0],
+                                    NSForegroundColorAttributeName: [UIColor whiteColor]};
+    [camera setTitleTextAttributes:titleTextAttr forState:UIControlStateNormal];
+    [camera setTitle:[NSString fontAwesomeIconStringForIconIdentifier:@"fa-camera-retro"]];
+    camera.target = self;
+    camera.action = @selector(cameraBarButtonPressed);
+    self.navigationItem.rightBarButtonItem = camera;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

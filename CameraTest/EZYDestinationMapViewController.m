@@ -41,7 +41,7 @@
 
 - (void)addButton
 {
-    CGRect viewRect = CGRectMake([UIScreen mainScreen].bounds.size.width - 140, [UIScreen mainScreen].bounds.size.height - 140, 120, 120);
+    CGRect viewRect = CGRectMake([UIScreen mainScreen].bounds.size.width - 140, [UIScreen mainScreen].bounds.size.height - 200, 120, 120); // This should be autolayout
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = viewRect;
     button.backgroundColor = [UIColor blueColor];

@@ -48,6 +48,8 @@
 		50D6477D1AC38ABC005EDA94 /* EZYDestinationImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6477C1AC38ABC005EDA94 /* EZYDestinationImageStore.m */; };
 		50D6477E1AC38DD2005EDA94 /* EZYDestinationImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6477C1AC38ABC005EDA94 /* EZYDestinationImageStore.m */; };
 		50D647801AC38DE5005EDA94 /* EZYDestinationImageStoreTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6477F1AC38DE5005EDA94 /* EZYDestinationImageStoreTestCase.m */; };
+		50F26D131AD1CE1D0029A208 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F26D111AD1CE1D0029A208 /* NSString+FontAwesome.m */; };
+		50F26D161AD1D0D80029A208 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50F26D151AD1D0D80029A208 /* FontAwesome.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,10 @@
 		50D6477B1AC38ABC005EDA94 /* EZYDestinationImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYDestinationImageStore.h; sourceTree = "<group>"; };
 		50D6477C1AC38ABC005EDA94 /* EZYDestinationImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYDestinationImageStore.m; sourceTree = "<group>"; };
 		50D6477F1AC38DE5005EDA94 /* EZYDestinationImageStoreTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYDestinationImageStoreTestCase.m; sourceTree = "<group>"; };
+		50F26D111AD1CE1D0029A208 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		50F26D121AD1CE1D0029A208 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		50F26D141AD1CF810029A208 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		50F26D151AD1D0D80029A208 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = CameraTest/FontAwesome.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,7 @@
 		50D6471C1AC0DDB4005EDA94 = {
 			isa = PBXGroup;
 			children = (
+				50F26D151AD1D0D80029A208 /* FontAwesome.ttf */,
 				50105A491AC87DF2008A74F2 /* SystemConfiguration.framework */,
 				50105A471AC87DE9008A74F2 /* QuartzCore.framework */,
 				50105A451AC87DE1008A74F2 /* OpenGLES.framework */,
@@ -185,6 +192,7 @@
 				50D647321AC0DDB4005EDA94 /* Main.storyboard */,
 				50D647351AC0DDB4005EDA94 /* Images.xcassets */,
 				50D647371AC0DDB4005EDA94 /* LaunchScreen.xib */,
+				50F26D141AD1CF810029A208 /* FontAwesome.ttf */,
 				50D647281AC0DDB4005EDA94 /* Supporting Files */,
 				50D6474E1AC0DE69005EDA94 /* CameraNavControllerViewController.h */,
 				50D6474F1AC0DE69005EDA94 /* CameraNavControllerViewController.m */,
@@ -192,6 +200,8 @@
 				50D6475D1AC23BD7005EDA94 /* EZYCollectionViewController.m */,
 				50D6475F1AC24248005EDA94 /* ImageCollectionViewCell.xib */,
 				50D647611AC24403005EDA94 /* EZYCollectionViewCell.h */,
+				50F26D111AD1CE1D0029A208 /* NSString+FontAwesome.m */,
+				50F26D121AD1CE1D0029A208 /* NSString+FontAwesome.h */,
 				50D647621AC24403005EDA94 /* EZYCollectionViewCell.m */,
 				50D647641AC25C82005EDA94 /* EZYImageStoreFileSystem.h */,
 				50D647651AC25C82005EDA94 /* EZYImageStoreFileSystem.m */,
@@ -318,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50F26D161AD1D0D80029A208 /* FontAwesome.ttf in Resources */,
 				50D647341AC0DDB4005EDA94 /* Main.storyboard in Resources */,
 				50D647391AC0DDB4005EDA94 /* LaunchScreen.xib in Resources */,
 				50D647601AC24248005EDA94 /* ImageCollectionViewCell.xib in Resources */,
@@ -346,6 +357,7 @@
 				50D647701AC37889005EDA94 /* EZYDestination.m in Sources */,
 				5014C30C1ACA2CFA0028892D /* EZYImageIsolationViewController.m in Sources */,
 				50D6472E1AC0DDB4005EDA94 /* AppDelegate.m in Sources */,
+				50F26D131AD1CE1D0029A208 /* NSString+FontAwesome.m in Sources */,
 				50D6472B1AC0DDB4005EDA94 /* main.m in Sources */,
 				50D647631AC24403005EDA94 /* EZYCollectionViewCell.m in Sources */,
 				50D6477D1AC38ABC005EDA94 /* EZYDestinationImageStore.m in Sources */,
