@@ -28,7 +28,7 @@
         _dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _dismissButton.frame = CGRectMake(0, 0, 100, 50);
         _dismissButton.translatesAutoresizingMaskIntoConstraints = NO;
-        [_dismissButton.titleLabel setFont:[UIFont fontWithName:@"FontAwesome" size:36.0]];
+        [_dismissButton.titleLabel setFont:[UIFont fontWithName:@"FontAwesome" size:48.0]];
         [_dismissButton setTitle:[NSString fontAwesomeIconStringForIconIdentifier:@"fa-times-circle-o"] forState:UIControlStateNormal];
         [_dismissButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_dismissButton sizeToFit];
@@ -37,13 +37,12 @@
 
         // Adding Constraints
         NSLayoutConstraint *buttonHorizConstraint = [NSLayoutConstraint constraintWithItem:self.dismissButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
-        CGRect screenBounds = [UIScreen mainScreen].bounds;
         NSDictionary *variables = @{@"imageView": self.imageView,
                                     @"dismissButton": self.dismissButton};
 
         
         NSArray *imageViewHorizConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(==0)-[imageView]-(==0)-|" options:0 metrics:nil views:variables];
-        NSArray *vertConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-75-[imageView(400)]-50-[dismissButton(50)]-(>=30)-|" options:0 metrics:nil views:variables];
+        NSArray *vertConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-75-[imageView(400)]-100-[dismissButton(50)]-(>=30)-|" options:0 metrics:nil views:variables];
         
         [self.view addConstraints:imageViewHorizConstraints];
         [self.view addConstraints:vertConstraints];
