@@ -27,7 +27,6 @@
 		50D647311AC0DDB4005EDA94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D647301AC0DDB4005EDA94 /* ViewController.m */; };
 		50D647341AC0DDB4005EDA94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D647321AC0DDB4005EDA94 /* Main.storyboard */; };
 		50D647361AC0DDB4005EDA94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D647351AC0DDB4005EDA94 /* Images.xcassets */; };
-		50D647391AC0DDB4005EDA94 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D647371AC0DDB4005EDA94 /* LaunchScreen.xib */; };
 		50D647451AC0DDB4005EDA94 /* CameraTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D647441AC0DDB4005EDA94 /* CameraTestTests.m */; };
 		50D647501AC0DE69005EDA94 /* CameraNavControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D6474F1AC0DE69005EDA94 /* CameraNavControllerViewController.m */; };
 		50D647581AC23A80005EDA94 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D647571AC23A80005EDA94 /* CoreLocation.framework */; };
@@ -89,7 +88,6 @@
 		50D647301AC0DDB4005EDA94 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		50D647331AC0DDB4005EDA94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50D647351AC0DDB4005EDA94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		50D647381AC0DDB4005EDA94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		50D6473E1AC0DDB4005EDA94 /* CameraTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D647431AC0DDB4005EDA94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D647441AC0DDB4005EDA94 /* CameraTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraTestTests.m; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 				50D647301AC0DDB4005EDA94 /* ViewController.m */,
 				50D647321AC0DDB4005EDA94 /* Main.storyboard */,
 				50D647351AC0DDB4005EDA94 /* Images.xcassets */,
-				50D647371AC0DDB4005EDA94 /* LaunchScreen.xib */,
 				50F26D141AD1CF810029A208 /* FontAwesome.ttf */,
 				50D647281AC0DDB4005EDA94 /* Supporting Files */,
 				50D6474E1AC0DE69005EDA94 /* CameraNavControllerViewController.h */,
@@ -330,7 +327,6 @@
 			files = (
 				50F26D161AD1D0D80029A208 /* FontAwesome.ttf in Resources */,
 				50D647341AC0DDB4005EDA94 /* Main.storyboard in Resources */,
-				50D647391AC0DDB4005EDA94 /* LaunchScreen.xib in Resources */,
 				50D647601AC24248005EDA94 /* ImageCollectionViewCell.xib in Resources */,
 				50D647361AC0DDB4005EDA94 /* Images.xcassets in Resources */,
 				50105A341AC87D0D008A74F2 /* GoogleMaps.bundle in Resources */,
@@ -402,14 +398,6 @@
 				50D647331AC0DDB4005EDA94 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		50D647371AC0DDB4005EDA94 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				50D647381AC0DDB4005EDA94 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -497,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -511,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

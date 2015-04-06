@@ -30,8 +30,6 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>CameraTest would like to use location services</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
