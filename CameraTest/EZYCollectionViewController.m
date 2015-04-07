@@ -34,7 +34,6 @@ static const CGFloat CameraButtonBottomPadding = 30.0;
     [super viewDidLoad];
     
     self.title = @"Neat Places";
-    [self addCameraButtonToNavView];
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -56,6 +55,7 @@ static const CGFloat CameraButtonBottomPadding = 30.0;
 
 }
 
+#pragma warn Change to tags nav button
 - (void)addCameraButtonToNavView
 {
     UIBarButtonItem *camera = [[UIBarButtonItem alloc] init];
@@ -107,12 +107,6 @@ static const CGFloat CameraButtonBottomPadding = 30.0;
     cell.imageView.image = [[EZYDestinationImageStore sharedDestinationImageStore] imageForKey:destinationAtIndex.imageKey];
     
     return cell;
-}
-
-- (void)addLongPressGestureRecognizerToCollectionView:(UICollectionView *)collectionView
-{
-    UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(deleteImageFromCollection)];
-    longPressGestureRecognizer.delaysTouchesBegan = YES;
 }
 
 - (void)deleteImageFromCollection
@@ -234,7 +228,6 @@ static const CGFloat CameraButtonBottomPadding = 30.0;
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
 {
     // This method is called when -startUpdatingLocation is called and the location manager starts to update locations
-//    NSLog(@"Updating Locations: Most Recent Location is %@", locations[locations.count - 1]);
 }
 
 #pragma mark CLLoactionManagerDelegate - Heading -
