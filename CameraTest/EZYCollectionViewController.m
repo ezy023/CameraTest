@@ -15,10 +15,15 @@
 #import "EZYDestinationMapViewController.h"
 #import "NSString+FontAwesome.h"
 
+static const CGFloat CameraButtonWidth = 80.0;
+static const CGFloat CameraButtonHeight = 80.0;
+static const CGFloat CameraButtonBottomPadding = 30.0;
+
 @interface EZYCollectionViewController ()
 
 @property (nonatomic, strong) EZYImageStoreFileSystem *imageStore;
 @property (nonatomic, strong) CLLocationManager *coreLocationManager;
+@property (nonatomic, strong) UIButton *cameraButton;
 
 @end
 
@@ -42,7 +47,7 @@
     self.coreLocationManager.distanceFilter = kCLDistanceFilterNone;
     self.coreLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
-    [self addLongPressGestureRecognizerToCollectionView:self.collectionView];
+    [self customCameraButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -61,6 +66,28 @@
     camera.target = self;
     camera.action = @selector(cameraBarButtonPressed);
     self.navigationItem.rightBarButtonItem = camera;
+}
+
+- (void)customCameraButton
+{
+    self.cameraButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [self.cameraButton.titleLabel setFont:[UIFont fontWithName:@"FontAwesome" size:48.0]];
+    [self.cameraButton setTitle:[NSString fontAwesomeIconStringForIconIdentifier:@"fa-camera-retro"] forState:UIControlStateNormal];
+    [self.cameraButton addTarget:self action:@selector(cameraBarButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.cameraButton setBackgroundColor:[UIColor colorWithRed:6/255.0 green:52/255.0 blue:93/255.0 alpha:1.0]];
+    CGFloat cameraButtonXPos = self.collectionView.frame.size.width / 2 - CameraButtonWidth / 2;
+    CGFloat cameraButtonYPos = self.collectionView.frame.size.height - (CameraButtonHeight* 2 - CameraButtonBottomPadding);
+    self.cameraButton.frame = CGRectMake(cameraButtonXPos, cameraButtonYPos, CameraButtonWidth, CameraButtonHeight);
+    
+    self.cameraButton.clipsToBounds = YES;
+    self.cameraButton.layer.cornerRadius = CameraButtonWidth/2.0f;
+    self.cameraButton.layer.borderWidth = 3.0f;
+    self.cameraButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
+    self.cameraButton.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.collectionView addSubview:self.cameraButton];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
