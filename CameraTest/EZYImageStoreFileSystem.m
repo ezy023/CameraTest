@@ -50,9 +50,24 @@
     return image;
 }
 
-- (void)removeImageForFilename:(NSString *)filename
+- (BOOL)removeImageForFilename:(NSString *)filename
 {
     NSString *deletePath = [self createDocumentPathForFilename:filename];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:deletePath]) {
+        NSLog(@"There is no file with the specified name."); // TODO Look up proper error handling methods
+    }
+    
+    NSError *deleteFileError;
+    BOOL success = [[NSFileManager defaultManager] removeItemAtPath:deletePath error:&deleteFileError];
+    
+    if (deleteFileError) {
+        NSLog(@"Error removing file at path %@. Description: %@", deletePath, deleteFileError.description);
+    }
+    
+    return success;
+    
+    
 }
 
 @end
