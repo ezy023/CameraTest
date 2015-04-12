@@ -46,7 +46,8 @@ static const CGFloat CameraButtonBottomPadding = 30.0;
     self.coreLocationManager.distanceFilter = kCLDistanceFilterNone;
     self.coreLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
-    [self customCameraButton];
+    [self addToolbarToCollection];
+    [self customizeToolbarAppearance];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -56,7 +57,7 @@ static const CGFloat CameraButtonBottomPadding = 30.0;
 }
 
 #pragma warn Change to tags nav button
-- (void)addCameraButtonToNavView
+- (UIBarButtonItem *)createCameraBarButtonItem
 {
     UIBarButtonItem *camera = [[UIBarButtonItem alloc] init];
     NSDictionary *titleTextAttr = @{NSFontAttributeName: [UIFont fontWithName:@"FontAwesome" size:28.0],
@@ -65,29 +66,25 @@ static const CGFloat CameraButtonBottomPadding = 30.0;
     [camera setTitle:[NSString fontAwesomeIconStringForIconIdentifier:@"fa-camera-retro"]];
     camera.target = self;
     camera.action = @selector(cameraBarButtonPressed);
-    self.navigationItem.rightBarButtonItem = camera;
+    return camera;
 }
 
-- (void)customCameraButton
+#pragma Custom views
+- (void)addToolbarToCollection
 {
-    self.cameraButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 59.0f, [UIScreen mainScreen].bounds.size.width, 44.0f)];
+    UIBarButtonItem *cameraButton = [self createCameraBarButtonItem];
+    UIBarButtonItem *flexButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    toolbar.items = @[flexButton, cameraButton, flexButton];
+    toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     
-    [self.cameraButton.titleLabel setFont:[UIFont fontWithName:@"FontAwesome" size:48.0]];
-    [self.cameraButton setTitle:[NSString fontAwesomeIconStringForIconIdentifier:@"fa-camera-retro"] forState:UIControlStateNormal];
-    [self.cameraButton addTarget:self action:@selector(cameraBarButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.cameraButton setBackgroundColor:[UIColor colorWithRed:6/255.0 green:52/255.0 blue:93/255.0 alpha:1.0]];
-    CGFloat cameraButtonXPos = self.collectionView.frame.size.width / 2 - CameraButtonWidth / 2;
-    CGFloat cameraButtonYPos = self.collectionView.frame.size.height - (CameraButtonHeight* 2 - CameraButtonBottomPadding);
-    self.cameraButton.frame = CGRectMake(cameraButtonXPos, cameraButtonYPos, CameraButtonWidth, CameraButtonHeight);
-    
-    self.cameraButton.clipsToBounds = YES;
-    self.cameraButton.layer.cornerRadius = CameraButtonWidth/2.0f;
-    self.cameraButton.layer.borderWidth = 3.0f;
-    self.cameraButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    
-    self.cameraButton.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self.collectionView addSubview:self.cameraButton];
+    [self.collectionView addSubview:toolbar];
+}
+
+- (void)customizeToolbarAppearance
+{
+    [UIToolbar appearance].barTintColor = [UIColor colorWithRed:6/255.0 green:52/255.0 blue:93/255.0 alpha:1.0];
+    [UIToolbar appearance].translucent = NO;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
