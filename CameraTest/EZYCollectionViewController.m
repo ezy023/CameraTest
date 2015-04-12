@@ -14,6 +14,7 @@
 #import "EZYDestinationImageStore.h"
 #import "EZYDestinationMapViewController.h"
 #import "NSString+FontAwesome.h"
+#import "UIColor+EZYColors.h"
 
 static const CGFloat CameraButtonWidth = 80.0;
 static const CGFloat CameraButtonHeight = 80.0;
@@ -83,7 +84,7 @@ static const CGFloat CameraButtonBottomPadding = 30.0;
 
 - (void)customizeToolbarAppearance
 {
-    [UIToolbar appearance].barTintColor = [UIColor colorWithRed:6/255.0 green:52/255.0 blue:93/255.0 alpha:1.0];
+    [UIToolbar appearance].barTintColor = [UIColor navigationNavyBlue];
     [UIToolbar appearance].translucent = NO;
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03C72CEC1ADB1940009056F4 /* UIColor+EZYColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C72CEB1ADB1940009056F4 /* UIColor+EZYColors.m */; };
 		50105A321AC87C7E008A74F2 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A311AC87C7E008A74F2 /* GoogleMaps.framework */; };
 		50105A341AC87D0D008A74F2 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50105A331AC87D0D008A74F2 /* GoogleMaps.bundle */; };
 		50105A361AC87D90008A74F2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A351AC87D90008A74F2 /* AVFoundation.framework */; };
@@ -62,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03C72CEA1ADB1940009056F4 /* UIColor+EZYColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+EZYColors.h"; sourceTree = "<group>"; };
+		03C72CEB1ADB1940009056F4 /* UIColor+EZYColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EZYColors.m"; sourceTree = "<group>"; };
 		50105A311AC87C7E008A74F2 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		50105A331AC87D0D008A74F2 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		50105A351AC87D90008A74F2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -183,6 +186,8 @@
 		50D647271AC0DDB4005EDA94 /* CameraTest */ = {
 			isa = PBXGroup;
 			children = (
+				03C72CEA1ADB1940009056F4 /* UIColor+EZYColors.h */,
+				03C72CEB1ADB1940009056F4 /* UIColor+EZYColors.m */,
 				50D6472C1AC0DDB4005EDA94 /* AppDelegate.h */,
 				50D6472D1AC0DDB4005EDA94 /* AppDelegate.m */,
 				50D6472F1AC0DDB4005EDA94 /* ViewController.h */,
@@ -351,6 +356,7 @@
 				50D647661AC25C82005EDA94 /* EZYImageStoreFileSystem.m in Sources */,
 				50D6476D1AC377EF005EDA94 /* EZYDestinationDataSource.m in Sources */,
 				50D647701AC37889005EDA94 /* EZYDestination.m in Sources */,
+				03C72CEC1ADB1940009056F4 /* UIColor+EZYColors.m in Sources */,
 				5014C30C1ACA2CFA0028892D /* EZYImageIsolationViewController.m in Sources */,
 				50D6472E1AC0DDB4005EDA94 /* AppDelegate.m in Sources */,
 				50F26D131AD1CE1D0029A208 /* NSString+FontAwesome.m in Sources */,

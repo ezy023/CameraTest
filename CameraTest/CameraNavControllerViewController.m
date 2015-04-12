@@ -7,6 +7,7 @@
 //
 
 #import "CameraNavControllerViewController.h"
+#import "UIColor+EZYColors.h"
 
 @interface CameraNavControllerViewController ()
 
@@ -19,7 +20,7 @@
 
     UINavigationBar *navBar = [UINavigationBar appearance];
     
-    UIColor *navBarDarkBlue = [UIColor colorWithRed:6/255.0 green:52/255.0 blue:93/255.0 alpha:1.0];
+    UIColor *navBarDarkBlue = [UIColor navigationNavyBlue];
     [navBar setBarTintColor:navBarDarkBlue];
     UIFont *newFont = [UIFont fontWithName:@"Futura-Medium" size:24.0];
     NSDictionary *navigationBarTitleTextAttributes = @{NSFontAttributeName: newFont,

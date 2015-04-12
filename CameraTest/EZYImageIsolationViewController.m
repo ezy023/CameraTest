@@ -8,6 +8,7 @@
 
 #import "EZYImageIsolationViewController.h"
 #import "NSString+FontAwesome.h"
+#import "UIColor+EZYColors.h"
 
 @implementation EZYImageIsolationViewController
 
@@ -17,7 +18,7 @@
     
     if (self) {
         self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        self.view.backgroundColor = [UIColor colorWithRed:6/255.0 green:52/255.0 blue:93/255.0 alpha:1.0];
+        self.view.backgroundColor = [UIColor navigationNavyBlue];
         
         CGRect imageViewRect = CGRectMake(0, 75, [UIScreen mainScreen].bounds.size.width, 400);
         _imageView = [[UIImageView alloc] initWithFrame:imageViewRect];
