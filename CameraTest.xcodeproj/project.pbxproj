@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		038D3E3D1ADF2A8E0035123E /* OCMockitoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D3E3B1ADF2A8E0035123E /* OCMockitoIOS.framework */; };
+		038D3E3F1ADF2AAC0035123E /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D3E3E1ADF2AAC0035123E /* OCHamcrestIOS.framework */; };
 		03C72CEC1ADB1940009056F4 /* UIColor+EZYColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C72CEB1ADB1940009056F4 /* UIColor+EZYColors.m */; };
 		50105A321AC87C7E008A74F2 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A311AC87C7E008A74F2 /* GoogleMaps.framework */; };
 		50105A341AC87D0D008A74F2 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50105A331AC87D0D008A74F2 /* GoogleMaps.bundle */; };
@@ -63,6 +65,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		038D3E3B1ADF2A8E0035123E /* OCMockitoIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMockitoIOS.framework; sourceTree = "<group>"; };
+		038D3E3E1ADF2AAC0035123E /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
+		038D3E401ADF2AE80035123E /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
 		03C72CEA1ADB1940009056F4 /* UIColor+EZYColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+EZYColors.h"; sourceTree = "<group>"; };
 		03C72CEB1ADB1940009056F4 /* UIColor+EZYColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EZYColors.m"; sourceTree = "<group>"; };
 		50105A311AC87C7E008A74F2 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
@@ -144,6 +149,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038D3E3D1ADF2A8E0035123E /* OCMockitoIOS.framework in Frameworks */,
+				038D3E3F1ADF2AAC0035123E /* OCHamcrestIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +165,9 @@
 				50105A471AC87DE9008A74F2 /* QuartzCore.framework */,
 				50105A451AC87DE1008A74F2 /* OpenGLES.framework */,
 				50105A431AC87DD9008A74F2 /* libz.dylib */,
+				038D3E3B1ADF2A8E0035123E /* OCMockitoIOS.framework */,
 				50105A411AC87DCF008A74F2 /* libicucore.dylib */,
+				038D3E3E1ADF2AAC0035123E /* OCHamcrestIOS.framework */,
 				50105A3F1AC87DC4008A74F2 /* libc++.dylib */,
 				50105A3D1AC87DBC008A74F2 /* ImageIO.framework */,
 				50105A3B1AC87DB6008A74F2 /* GLKit.framework */,
@@ -238,6 +247,7 @@
 				50D647771AC378D8005EDA94 /* DestinationTestCase.m */,
 				50D647791AC37BB9005EDA94 /* EZYDestinationDataSourceTestCase.m */,
 				50D6477F1AC38DE5005EDA94 /* EZYDestinationImageStoreTestCase.m */,
+				038D3E401ADF2AE80035123E /* TestHelper.h */,
 			);
 			path = CameraTestTests;
 			sourceTree = "<group>";
@@ -531,6 +541,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -550,6 +561,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CameraTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
