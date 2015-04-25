@@ -34,7 +34,7 @@ static const CGFloat CameraButtonBottomPadding = 30.0;
 {
     [super viewDidLoad];
     
-    self.title = @"Neat Places";
+    self.title = @"Marker";
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;

@@ -87,7 +87,7 @@
 		50105A501AC8906C008A74F2 /* EZYDestinationMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYDestinationMapViewController.m; sourceTree = "<group>"; };
 		5014C30A1ACA2CFA0028892D /* EZYImageIsolationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZYImageIsolationViewController.h; sourceTree = "<group>"; };
 		5014C30B1ACA2CFA0028892D /* EZYImageIsolationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZYImageIsolationViewController.m; sourceTree = "<group>"; };
-		50D647251AC0DDB4005EDA94 /* CameraTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D647251AC0DDB4005EDA94 /* Marker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D647291AC0DDB4005EDA94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D6472A1AC0DDB4005EDA94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50D6472C1AC0DDB4005EDA94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		50D647301AC0DDB4005EDA94 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		50D647331AC0DDB4005EDA94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50D647351AC0DDB4005EDA94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		50D6473E1AC0DDB4005EDA94 /* CameraTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D6473E1AC0DDB4005EDA94 /* MarkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D647431AC0DDB4005EDA94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D647441AC0DDB4005EDA94 /* CameraTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraTestTests.m; sourceTree = "<group>"; };
 		50D6474E1AC0DE69005EDA94 /* CameraNavControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraNavControllerViewController.h; sourceTree = "<group>"; };
@@ -186,8 +186,8 @@
 		50D647261AC0DDB4005EDA94 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50D647251AC0DDB4005EDA94 /* CameraTest.app */,
-				50D6473E1AC0DDB4005EDA94 /* CameraTestTests.xctest */,
+				50D647251AC0DDB4005EDA94 /* Marker.app */,
+				50D6473E1AC0DDB4005EDA94 /* MarkerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,9 +263,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		50D647241AC0DDB4005EDA94 /* CameraTest */ = {
+		50D647241AC0DDB4005EDA94 /* Marker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50D647481AC0DDB4005EDA94 /* Build configuration list for PBXNativeTarget "CameraTest" */;
+			buildConfigurationList = 50D647481AC0DDB4005EDA94 /* Build configuration list for PBXNativeTarget "Marker" */;
 			buildPhases = (
 				50D647211AC0DDB4005EDA94 /* Sources */,
 				50D647221AC0DDB4005EDA94 /* Frameworks */,
@@ -275,14 +275,14 @@
 			);
 			dependencies = (
 			);
-			name = CameraTest;
+			name = Marker;
 			productName = CameraTest;
-			productReference = 50D647251AC0DDB4005EDA94 /* CameraTest.app */;
+			productReference = 50D647251AC0DDB4005EDA94 /* Marker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		50D6473D1AC0DDB4005EDA94 /* CameraTestTests */ = {
+		50D6473D1AC0DDB4005EDA94 /* MarkerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50D6474B1AC0DDB4005EDA94 /* Build configuration list for PBXNativeTarget "CameraTestTests" */;
+			buildConfigurationList = 50D6474B1AC0DDB4005EDA94 /* Build configuration list for PBXNativeTarget "MarkerTests" */;
 			buildPhases = (
 				50D6473A1AC0DDB4005EDA94 /* Sources */,
 				50D6473B1AC0DDB4005EDA94 /* Frameworks */,
@@ -293,9 +293,9 @@
 			dependencies = (
 				50D647401AC0DDB4005EDA94 /* PBXTargetDependency */,
 			);
-			name = CameraTestTests;
+			name = MarkerTests;
 			productName = CameraTestTests;
-			productReference = 50D6473E1AC0DDB4005EDA94 /* CameraTestTests.xctest */;
+			productReference = 50D6473E1AC0DDB4005EDA94 /* MarkerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -317,7 +317,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 50D647201AC0DDB4005EDA94 /* Build configuration list for PBXProject "CameraTest" */;
+			buildConfigurationList = 50D647201AC0DDB4005EDA94 /* Build configuration list for PBXProject "Marker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -330,8 +330,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50D647241AC0DDB4005EDA94 /* CameraTest */,
-				50D6473D1AC0DDB4005EDA94 /* CameraTestTests */,
+				50D647241AC0DDB4005EDA94 /* Marker */,
+				50D6473D1AC0DDB4005EDA94 /* MarkerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -403,7 +403,7 @@
 /* Begin PBXTargetDependency section */
 		50D647401AC0DDB4005EDA94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 50D647241AC0DDB4005EDA94 /* CameraTest */;
+			target = 50D647241AC0DDB4005EDA94 /* Marker */;
 			targetProxy = 50D6473F1AC0DDB4005EDA94 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -511,7 +511,7 @@
 				);
 				INFOPLIST_FILE = CameraTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Marker;
 				PROVISIONING_PROFILE = "b8f25384-e2d1-459e-a730-64013a0f6721";
 			};
 			name = Debug;
@@ -529,7 +529,7 @@
 				);
 				INFOPLIST_FILE = CameraTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Marker;
 				PROVISIONING_PROFILE = "b8f25384-e2d1-459e-a730-64013a0f6721";
 			};
 			name = Release;
@@ -549,7 +549,7 @@
 				);
 				INFOPLIST_FILE = CameraTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MarkerTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraTest.app/CameraTest";
 			};
 			name = Debug;
@@ -565,7 +565,7 @@
 				);
 				INFOPLIST_FILE = CameraTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MarkerTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraTest.app/CameraTest";
 			};
 			name = Release;
@@ -573,7 +573,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50D647201AC0DDB4005EDA94 /* Build configuration list for PBXProject "CameraTest" */ = {
+		50D647201AC0DDB4005EDA94 /* Build configuration list for PBXProject "Marker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50D647461AC0DDB4005EDA94 /* Debug */,
@@ -582,7 +582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50D647481AC0DDB4005EDA94 /* Build configuration list for PBXNativeTarget "CameraTest" */ = {
+		50D647481AC0DDB4005EDA94 /* Build configuration list for PBXNativeTarget "Marker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50D647491AC0DDB4005EDA94 /* Debug */,
@@ -591,7 +591,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50D6474B1AC0DDB4005EDA94 /* Build configuration list for PBXNativeTarget "CameraTestTests" */ = {
+		50D6474B1AC0DDB4005EDA94 /* Build configuration list for PBXNativeTarget "MarkerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50D6474C1AC0DDB4005EDA94 /* Debug */,
