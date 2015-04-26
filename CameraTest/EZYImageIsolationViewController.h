@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "EZYDestination.h"
 
 @interface EZYImageIsolationViewController : UIViewController
 
+@property (nonatomic, strong) EZYDestination *currentDestination;
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIButton *dismissButton;
+@property (nonatomic, strong) UIButton *openInGMapsButton;
 
-- (instancetype)initWithImage:(UIImage *)image;
+- (instancetype)initWithDestination:(EZYDestination *)destination;
 
 @end

@@ -88,10 +88,7 @@
 {
     NSLog(@"Image was tapped");
 
-    UIImage *isoImage = [[EZYDestinationImageStore sharedDestinationImageStore] imageForKey:self.destination.imageKey];
-    EZYImageIsolationViewController *imageIsoVC = [[EZYImageIsolationViewController alloc] initWithImage:isoImage];
-//    [imageIsoVC.imageView setImage:isoImage];
-//    imageIsoVC.imageView.backgroundColor = [UIColor orangeColor];
+    EZYImageIsolationViewController *imageIsoVC = [[EZYImageIsolationViewController alloc] initWithDestination:self.destination];
     [self presentViewController:imageIsoVC animated:YES completion:nil];
 }
 
