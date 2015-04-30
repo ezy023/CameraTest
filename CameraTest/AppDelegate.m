@@ -14,6 +14,10 @@
 #import "EZYDestinationDataSource.h"
 #import <GoogleMaps/GoogleMaps.h>
 
+static int const collectionCellWidth = 125;
+static int const collectionCellHeight = 125;
+static int const collectionCellInterLineSpacing = 0;
+
 static NSString *const googleMapsAPIKey = @"AIzaSyDFrgUJZfDFjsPRNTuKavskH8Atkj-s4xI";
 
 @interface AppDelegate ()
@@ -30,9 +34,9 @@ static NSString *const googleMapsAPIKey = @"AIzaSyDFrgUJZfDFjsPRNTuKavskH8Atkj-s
     
 //    ViewController *vc = [[ViewController alloc] init];
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(123, 123);
-    flowLayout.minimumInteritemSpacing = 2;
-    flowLayout.minimumLineSpacing = 2;
+    flowLayout.itemSize = CGSizeMake(collectionCellWidth, collectionCellHeight);
+    flowLayout.minimumInteritemSpacing = collectionCellInterLineSpacing;
+    flowLayout.minimumLineSpacing = collectionCellInterLineSpacing;
     EZYCollectionViewController *collectionVC = [[EZYCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
     
     CameraNavControllerViewController *camNav = [[CameraNavControllerViewController alloc] initWithRootViewController:collectionVC];
