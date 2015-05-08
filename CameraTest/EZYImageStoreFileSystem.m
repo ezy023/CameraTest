@@ -37,7 +37,7 @@
         }
     }
     
-    NSString *filePath = [documentsPath stringByAppendingPathComponent:filename];
+    NSString *filePath = [imageDirectoryPath stringByAppendingPathComponent:filename];
     return filePath;
 }
 
