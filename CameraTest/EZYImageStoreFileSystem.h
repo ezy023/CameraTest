@@ -13,6 +13,6 @@
 
 - (void)saveImage:(UIImage *)imageToSave toFileName:(NSString *)filename;
 - (UIImage *)retrieveImageForFilename:(NSString *)filename;
-- (void)removeImageForFilename:(NSString *)filename;
+- (BOOL)removeImageForFilename:(NSString *)filename;
 
 @end

@@ -86,6 +86,7 @@
 {
     if (self.imageCacheDictionary[imageKey]) {
         [self.imageCacheDictionary removeObjectForKey:imageKey];
+        [self.fileSystemImageStore removeImageForFilename:imageKey];
     }
 }
 
