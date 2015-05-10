@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0318A1D61B000C6D007E9662 /* EZYDestinationMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50105A501AC8906C008A74F2 /* EZYDestinationMapViewController.m */; };
+		0318A1D71B000DB1007E9662 /* EZYImageIsolationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5014C30B1ACA2CFA0028892D /* EZYImageIsolationViewController.m */; };
+		0318A1D81B000F19007E9662 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A351AC87D90008A74F2 /* AVFoundation.framework */; };
+		0318A1D91B000F19007E9662 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A371AC87D96008A74F2 /* CoreData.framework */; };
+		0318A1DA1B000F19007E9662 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D647571AC23A80005EDA94 /* CoreLocation.framework */; };
+		0318A1DB1B000F19007E9662 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A391AC87DA1008A74F2 /* CoreText.framework */; };
+		0318A1DC1B000F19007E9662 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A3B1AC87DB6008A74F2 /* GLKit.framework */; };
+		0318A1DD1B000F19007E9662 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A3D1AC87DBC008A74F2 /* ImageIO.framework */; };
+		0318A1DE1B000F19007E9662 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A451AC87DE1008A74F2 /* OpenGLES.framework */; };
+		0318A1DF1B000F19007E9662 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A471AC87DE9008A74F2 /* QuartzCore.framework */; };
+		0318A1E01B000F19007E9662 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A491AC87DF2008A74F2 /* SystemConfiguration.framework */; };
+		0318A1E11B000F26007E9662 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A431AC87DD9008A74F2 /* libz.dylib */; };
+		0318A1E21B000F30007E9662 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A3F1AC87DC4008A74F2 /* libc++.dylib */; };
+		0318A1E31B000F5D007E9662 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50105A311AC87C7E008A74F2 /* GoogleMaps.framework */; };
 		038D3E3D1ADF2A8E0035123E /* OCMockitoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D3E3B1ADF2A8E0035123E /* OCMockitoIOS.framework */; };
 		038D3E3F1ADF2AAC0035123E /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038D3E3E1ADF2AAC0035123E /* OCHamcrestIOS.framework */; };
 		03C72CEC1ADB1940009056F4 /* UIColor+EZYColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C72CEB1ADB1940009056F4 /* UIColor+EZYColors.m */; };
@@ -149,6 +163,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0318A1E31B000F5D007E9662 /* GoogleMaps.framework in Frameworks */,
+				0318A1E21B000F30007E9662 /* libc++.dylib in Frameworks */,
+				0318A1E11B000F26007E9662 /* libz.dylib in Frameworks */,
+				0318A1D81B000F19007E9662 /* AVFoundation.framework in Frameworks */,
+				0318A1D91B000F19007E9662 /* CoreData.framework in Frameworks */,
+				0318A1DA1B000F19007E9662 /* CoreLocation.framework in Frameworks */,
+				0318A1DB1B000F19007E9662 /* CoreText.framework in Frameworks */,
+				0318A1DC1B000F19007E9662 /* GLKit.framework in Frameworks */,
+				0318A1DD1B000F19007E9662 /* ImageIO.framework in Frameworks */,
+				0318A1DE1B000F19007E9662 /* OpenGLES.framework in Frameworks */,
+				0318A1DF1B000F19007E9662 /* QuartzCore.framework in Frameworks */,
+				0318A1E01B000F19007E9662 /* SystemConfiguration.framework in Frameworks */,
 				038D3E3D1ADF2A8E0035123E /* OCMockitoIOS.framework in Frameworks */,
 				038D3E3F1ADF2AAC0035123E /* OCHamcrestIOS.framework in Frameworks */,
 			);
@@ -384,6 +410,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0318A1D71B000DB1007E9662 /* EZYImageIsolationViewController.m in Sources */,
+				0318A1D61B000C6D007E9662 /* EZYDestinationMapViewController.m in Sources */,
 				50D647451AC0DDB4005EDA94 /* CameraTestTests.m in Sources */,
 				50D647761AC378B0005EDA94 /* EZYImageStoreFileSystem.m in Sources */,
 				50D647721AC378A7005EDA94 /* EZYDestinationDataSource.m in Sources */,
@@ -537,7 +565,6 @@
 		50D6474C1AC0DDB4005EDA94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -550,14 +577,12 @@
 				INFOPLIST_FILE = CameraTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = MarkerTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraTest.app/CameraTest";
 			};
 			name = Debug;
 		};
 		50D6474D1AC0DDB4005EDA94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -566,7 +591,6 @@
 				INFOPLIST_FILE = CameraTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = MarkerTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CameraTest.app/CameraTest";
 			};
 			name = Release;
 		};
